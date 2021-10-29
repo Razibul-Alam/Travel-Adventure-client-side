@@ -13,7 +13,7 @@ const AddItems = () => {
             descripton:data.description,
             img:imgUrl
         }
-      axios.post('http://localhost:5000/addItem',info)
+      axios.post('https://hidden-bayou-72012.herokuapp.com/addItem',info)
       .then(response => console.log(response));
     }
   

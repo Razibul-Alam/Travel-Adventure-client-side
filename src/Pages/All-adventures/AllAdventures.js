@@ -4,7 +4,7 @@ import SingleAdventure from './SingleAdventure';
 const AllAdventures = () => {
     const[adventures,setAdventures]=useState([])
     useEffect(()=>{
-        axios.get(`http://localhost:5000/allEvents`)
+        axios.get(`https://hidden-bayou-72012.herokuapp.com/allEvents`)
         .then(res => {
           const allAdventure = res.data;
           console.log(allAdventure)
