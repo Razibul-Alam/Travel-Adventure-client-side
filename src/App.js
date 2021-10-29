@@ -3,9 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import AuthProvider from './AuthProvider/AuthProvider';
 import AddItems from './Pages/Add-New Items/AddItems';
+import Booking from './Pages/Booking-Page/Booking';
 import Header from './Pages/Header-Page/Header';
 import HomeMain from './Pages/Home-Page/HomeMain';
 import Login from './Pages/Login-Page/Login';
+import ManageEvents from './Pages/Manage-Events/ManageEvents';
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
 </Route>
 <Route exact path='/login'>
  <Login/>
+</Route>
+<Route exact path='/booking/:bookingId'>
+ <Booking/>
+</Route>
+<Route exact path='/manage-events'>
+ <ManageEvents/>
 </Route>
 <Route exact path='/'>
   <HomeMain/>
