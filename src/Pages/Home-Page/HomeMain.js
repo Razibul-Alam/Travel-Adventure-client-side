@@ -1,9 +1,10 @@
 import React from 'react';
+import AllAdventures from '../All-adventures/AllAdventures';
 
 const HomeMain = () => {
     return (
         <div>
-          this is home  
+          <AllAdventures/> 
         </div>
     );
 };
