@@ -9,6 +9,7 @@ import HomeMain from './Pages/Home-Page/HomeMain';
 import Login from './Pages/Login-Page/Login';
 import ManageBookings from './Pages/Manage-Bookings/ManageBookings';
 import ManageEvents from './Pages/Manage-Events/ManageEvents';
+import MyBookings from './Pages/My-Bookings/MyBookings';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
 </Route>
 <Route exact path='/manage-bookings'>
  <ManageBookings/>
+</Route>
+<Route exact path='/mybookings'>
+ <MyBookings/>
 </Route>
 <Route exact path='/booking/:bookingId'>
  <Booking/>

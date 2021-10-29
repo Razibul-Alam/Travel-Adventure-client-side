@@ -17,6 +17,7 @@ const Header = () => {
       <NavLink to ='/additem'>Add Item</NavLink>
       <NavLink to ='/travels'>Adventures</NavLink>
       <NavLink to ='/manage-bookings'>Manage-Events</NavLink>
+      <NavLink to ='/mybookings'>My-Bookings</NavLink>
       {user.displayName&&<NavLink to ='/login'>{user.displayName}</NavLink>}
      { user.displayName?<Button onClick={logOut} >Logout</Button>:
      <NavLink to ='/login'>Login</NavLink>}
