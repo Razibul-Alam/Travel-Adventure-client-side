@@ -1,16 +1,23 @@
 import React from 'react';
-import {Button} from 'react-bootstrap'
+import {Button,Card,Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
 const SingleAdventure = ({adventure}) => {
     const{_id,img,title,descripton}=adventure;
     return (
-        <div>
-          <img src={img} alt=""/>  
-          <h3>{title}</h3>
-          <p>{descripton}</p>
+      <Col>
+      <Card>
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>
+           {descripton}
+          </Card.Text>
           <Link to={`/booking/${_id}`}><Button>Book</Button></Link>
-        </div>
+        </Card.Body>
+        
+      </Card>
+    </Col>
     );
 };
 

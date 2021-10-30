@@ -1,17 +1,42 @@
-import React from 'react';
-import {Button} from 'react-bootstrap'
+import React,{useEffect} from 'react';
+import {Button,Col,Card} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import axios from 'axios';
 
-
-const SingleBooking = ({booking}) => {
-    const{_id,img,title,descripton}=booking;
+const SingleBooking = ({booking,cancelBooking}) => {
+    const{_id,img,title,descripton,status,name}=booking;
+   
+    // useEffect(()=>{
+    //  cancelBooking(_id)
+      
+    // },[_id])
+    // booking approve handle
+    const approveBooking=(id)=>{
+      const approval={status:'Approved',id:id}
+axios.put('https://hidden-bayou-72012.herokuapp.com/updateStatus',approval)
+.then((result)=>console.log(result))
+    }
     return (
-        <div>
-          <img src={img} alt=""/>  
-          <h3>{title}</h3>
-          <p>{descripton}</p>
-          <Link to={`/booking/${_id}`}><Button>Book</Button></Link>
-        </div>
+        <Col>
+        <Card>
+          <Card.Img variant="top" src={img} className='img-fluid' />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>
+             {descripton}
+            </Card.Text>
+            <Card.Text className='text-warning'>
+             {status}
+            </Card.Text>
+            <Card.Text className='text-danger'>
+             Booked by {name}
+            </Card.Text>
+            <Button className='me-2' onClick={()=>{approveBooking(_id)}}>Approve</Button>
+            <Button onClick={()=>{cancelBooking(_id)}}>Cancel</Button>
+          </Card.Body>
+          
+        </Card>
+      </Col>
     );
 };
 

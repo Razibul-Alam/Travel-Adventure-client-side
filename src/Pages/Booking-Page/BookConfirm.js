@@ -13,6 +13,7 @@ const BookConfirm = ({info}) => {
             descripton:descripton,
             img:img,
             email:user.email, 
+            name:user.displayName,
             status:'Pending'
         }
       axios.post('https://hidden-bayou-72012.herokuapp.com/addBooking',bookingInfo)

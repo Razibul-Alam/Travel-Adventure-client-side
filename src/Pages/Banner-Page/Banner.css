@@ -1,0 +1,8 @@
+.banner{
+    background: url('https://images.unsplash.com/photo-1621603414814-f3217449f9b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZseWluZyUyMHBsYW5lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 400px;
+    max-width: 100%;
+    
+}

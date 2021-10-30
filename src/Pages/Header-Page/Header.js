@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
 
 const Header = () => {
@@ -13,14 +13,14 @@ const Header = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ms-auto">
-      <NavLink to ='/home'>Home</NavLink>
-      <NavLink to ='/additem'>Add Item</NavLink>
-      <NavLink to ='/travels'>Adventures</NavLink>
-      <NavLink to ='/manage-bookings'>Manage-Events</NavLink>
-      <NavLink to ='/mybookings'>My-Bookings</NavLink>
-      {user.displayName&&<NavLink to ='/login'>{user.displayName}</NavLink>}
+      <Nav.Link as ={Link} to='/home'>Home</Nav.Link>
+      <Nav.Link as ={Link}  to ='/additem'>Add Item</Nav.Link>
+      <Nav.Link as ={Link}  to ='/adventures'>Adventures</Nav.Link>
+      <Nav.Link as ={Link}  to ='/manage-bookings'>Manage-Events</Nav.Link>
+      <Nav.Link as ={Link}  to ='/mybookings'>My-Bookings</Nav.Link>
+      {user.displayName&&<Nav.Link as ={Link}  to ='/login'>{user.displayName}</Nav.Link>}
      { user.displayName?<Button onClick={logOut} >Logout</Button>:
-     <NavLink to ='/login'>Login</NavLink>}
+     <Nav.Link as={Link} to ='/login'>Login</Nav.Link>}
       
       
      
