@@ -5,12 +5,13 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import AddItems from './Pages/Add-New Items/AddItems';
 import AllAdventures from './Pages/All-adventures/AllAdventures';
 import Booking from './Pages/Booking-Page/Booking';
+import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header-Page/Header';
 import HomeMain from './Pages/Home-Page/HomeMain';
 import Login from './Pages/Login-Page/Login';
 import ManageBookings from './Pages/Manage-Bookings/ManageBookings';
-import ManageEvents from './Pages/Manage-Events/ManageEvents';
 import MyBookings from './Pages/My-Bookings/MyBookings';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -36,16 +37,14 @@ function App() {
 <Route exact path='/mybookings'>
  <MyBookings/>
 </Route>
-<Route exact path='/booking/:bookingId'>
+<PrivateRoute exact path='/booking/:bookingId'>
  <Booking/>
-</Route>
-<Route exact path='/manage-events'>
- <ManageEvents/>
-</Route>
+</PrivateRoute>
 <Route exact path='/'>
   <HomeMain/>
 </Route>
       </Switch>
+      <Footer/>
     </Router>
     </AuthProvider>
    

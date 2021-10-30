@@ -3,7 +3,7 @@ import {Button,Card,Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
 
-const MySingleBooking = ({booking}) => {
+const MySingleBooking = ({booking,cancelBooking}) => {
     const{_id,img,title,descripton,status}=booking;
     return (
         <Col>
@@ -17,8 +17,7 @@ const MySingleBooking = ({booking}) => {
             <Card.Text className='text-warning'>
              {status}
             </Card.Text>
-            <Button className='me-2'>Approve</Button>
-            <Button>Cancel</Button>
+            <Button onClick={()=>{cancelBooking(_id)}}>Cancel</Button>
           </Card.Body>
           
         </Card>

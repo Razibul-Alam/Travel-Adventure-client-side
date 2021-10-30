@@ -30,11 +30,15 @@ const AddItems = () => {
       }
       console.log(imgUrl)
     const productImageRegister = register("productImage", {required: true})
+
     return (
+      <div className="mt-5 d-flex justify-content-center row">
+         <div className="p-4 rounded col-lg-6 col-sm-10 shadow">
+         <h2 className="text-center text-danger mb-4">Add Package</h2>
     <form onSubmit={handleSubmit(onSubmit)}>
-    <input type="text" defaultValue="" {...register("title")} />
-    <input type="text" {...register("description", { required: true })} />
-    <input className="form-control"
+    <input className="form-control mt-2"  type="text" defaultValue="" {...register("title")} />
+    <input className="form-control mt-2"  type="text" {...register("description", { required: true })} />
+    <input className="form-control mt-2"
        type="file"
        {...productImageRegister }
        onChange={e => {
@@ -42,8 +46,10 @@ const AddItems = () => {
            handleFile(e);
        }} />
     {errors.exampleRequired && <span>This field is required</span>}
-    {uploading?<p>Uploading....</p>:<input type="submit" />}
+    {uploading?<p>Uploading....</p>:<input className="form-control mt-2 bg-primary"  type="submit" />}
   </form>
+  </div>
+  </div>
     );
 };
 

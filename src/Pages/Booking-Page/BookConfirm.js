@@ -20,15 +20,18 @@ const BookConfirm = ({info}) => {
       .then(response => console.log(response));
     }
     return (
-        <div>
+        <div className="mt-4 d-flex justify-content-center row">
+         <div className="p-4 rounded col-lg-8 col-sm-10 shadow">
+         {/* <h2 className="text-center text-danger">Add product</h2> */}
             <form onSubmit={handleSubmit(onSubmit)}>
-    <input type="text" readOnly defaultValue={user.email} {...register("email")} /> <br />
-    <input type="text" readOnly defaultValue={user.displayName} {...register("name")} /> <br />
-    <input type="text" placeholder="Address" {...register("Address")} /> <br />
-    <input type="text" placeholder="Phone" {...register("phone", { required: true })} /> <br /> 
+    <input className="form-control mt-3" type="text" readOnly defaultValue={user.email} {...register("email")} /> 
+    <input className="form-control mt-3" type="text" readOnly defaultValue={user.displayName} {...register("name")} />
+    <input className="form-control mt-3" type="text" placeholder="Address" {...register("Address")} />
     {errors.exampleRequired && <span>This field is required</span>}
-    <input type="submit" value="Book Confirm"/>
+    <input className="form-control mt-3" type="date" placeholder="Date" {...register("date", { required: true })} />
+    <input className='form-control bg-primary mt-3' type="submit" value="Book Confirm"/>
   </form>
+        </div>
         </div>
     );
 };

@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import SingleAdventure from './SingleAdventure';
-import { findRenderedDOMComponentWithTag } from 'react-dom/test-utils';
 import { Row } from 'react-bootstrap';
 const AllAdventures = () => {
     const[adventures,setAdventures]=useState([])
@@ -15,9 +14,15 @@ const AllAdventures = () => {
         })
     },[])
     return (
-        <Row xs={1} md={3} className="g-4">
+        <>
+        <div className='my-5'>
+        <h2 className='text-center text-success'>Our Packages</h2>
+        <hr className='m-auto text-danger bolder w-25'/>
+        <Row xs={1} md={3} className="g-4 mt-3">
            {adventures.map(adventure=><SingleAdventure key={adventure._id} adventure={adventure}/>)}
         </Row>
+        </div>
+        </>
     );
 };
 

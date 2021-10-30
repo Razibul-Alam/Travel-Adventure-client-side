@@ -13,11 +13,8 @@ const useFirebase=()=>{
 // google login
 const loginWithGoogle=()=>{
   setIsLoading(true)
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user)
-      }).catch((error) => {
+   return signInWithPopup(auth, provider)
+      .catch((error) => {
         const errorMessage = error.message;
         setError(errorMessage)
       })

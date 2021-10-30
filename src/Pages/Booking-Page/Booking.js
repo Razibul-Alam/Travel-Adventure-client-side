@@ -16,10 +16,14 @@ const Booking = () => {
     },[])
     const {_id,title,img,description}=singleItem
     return (
-        <div className='row'>
-        <div className='col-lg-6'>
-           <img src={img} alt="" />
+        <div className='row justify-content-center align-items-center mt-5'>
+        <div className='col-lg-6 '>
+          <div className='d-flex justify-content-center'>
+              <div>
+              <img src={img} alt="" />
            <h4>{title}</h4>
+              </div>
+          </div>
         </div>
         <div className='col-lg-6'>
 <BookConfirm info={singleItem}/>

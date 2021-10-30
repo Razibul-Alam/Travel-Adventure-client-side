@@ -12,17 +12,21 @@ const ManageBookings = () => {
           setBookings(allBookings)
           
         })
-    },[])
+    },[bookings])
      // cancel booking
      const cancelBooking=(_id)=>{
+       const confirmDelete=window.confirm('Are you sure? Do you want to remove?')
+       if(confirmDelete){
         axios.delete(`https://hidden-bayou-72012.herokuapp.com/removeItem/${_id}`)
         .then((result) =>{if(result.data.deletedCount>0){
 const remainingItems=bookings.filter(booking=>!booking._id==_id)
 setBookings(remainingItems)
         }});
+       }
       }
     return (
-        <div className='container w-75'>
+        <div className='container w-75 my-5'>
+          <h2 className='text-center text-danger mb-4'>The number of Bookings {bookings?.length}</h2>
         <Row xs={1} md={2} className="g-4">
            {bookings.map(booking=><SingleBooking booking={booking} cancelBooking={cancelBooking}/>)}
            </Row>

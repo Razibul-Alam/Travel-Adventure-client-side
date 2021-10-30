@@ -1,11 +1,25 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
 import './Banner.css'
+import BannerItem from './BannerItem';
 
 const Banner = () => {
     return (
-        <div className='banner'>
-            <h2 className='text-danger'>Fell The Life from Deep</h2>
-        </div>
+        <>
+        <section> 
+        <Carousel variant="dark" className='pb-5 bg-dark'>
+        <Carousel.Item>
+ <BannerItem/>
+  </Carousel.Item>
+  <Carousel.Item>
+  <BannerItem/>
+  </Carousel.Item>
+  <Carousel.Item>
+  <BannerItem/>
+  </Carousel.Item>
+</Carousel>  
+        </section>      
+</>
     );
 };
 
