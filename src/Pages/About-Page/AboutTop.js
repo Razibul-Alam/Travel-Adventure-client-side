@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button, ListGroup } from 'react-bootstrap';
-import './About.css'
 const AboutTop = () => {
     return (
         <section className='row mt-5'>

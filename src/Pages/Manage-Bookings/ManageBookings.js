@@ -22,7 +22,7 @@ const ManageBookings = () => {
        if(confirmDelete){
         axios.delete(`https://hidden-bayou-72012.herokuapp.com/removeItem/${_id}`)
         .then((result) =>{if(result.data.deletedCount>0){
-const remainingItems=bookings.filter(booking=>!booking._id==_id)
+const remainingItems=bookings?.filter(booking=>!booking._id==_id)
 handleShow()
 setBookings(remainingItems)
         }});

@@ -2,7 +2,6 @@ import React from 'react';
 import AboutTop from './AboutTop';
 import AboutUs from './AboutUs';
 
-
 const AboutMain = () => {
     return (
         <div className='container my-4'>
