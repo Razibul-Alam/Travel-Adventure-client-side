@@ -11,6 +11,7 @@ import HomeMain from './Pages/Home-Page/HomeMain';
 import Login from './Pages/Login-Page/Login';
 import ManageBookings from './Pages/Manage-Bookings/ManageBookings';
 import MyBookings from './Pages/My-Bookings/MyBookings';
+import NotFound from './Pages/NotFound/NotFound';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
 </PrivateRoute>
 <Route exact path='/'>
   <HomeMain/>
+</Route>
+<Route exact path='*'>
+  <NotFound/>
 </Route>
       </Switch>
       <Footer/>

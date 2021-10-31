@@ -9,7 +9,8 @@ const AboutTop = () => {
         </div>
         <div className="col-lg-6">
           <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eos reiciendis pariatur! Explicabo amet inventore, vitae doloribus officia, corporis quis quae nam eaque quasi, recusandae molestiae! Soluta earum, totam inventore nemo ipsam repudiandae architecto est, magnam suscipit nisi assumenda voluptatem. Fugiat ipsam et obcaecati maxime ad error magni! Voluptate voluptatibus, laudantium sit consequuntur soluta eius, dolore eligendi alias, vel iste labore! Doloribus molestiae veniam tenetur ab impedit! Consectetur repudiandae, autem maiores quis sint officia quae? Magnam error ut nihil quaerat libero consequuntur sequi recusandae? Excepturi, placeat. Aut necessitatibus, pariatur saepe placeat nostrum, quis qui quod voluptate eveniet a nobis dolore? 
+         I appricite you for showing lots of curisity about us.We always try to provide you a good tour. You can fly with us safe and joyfully.Really you can get a excited travel with us.
+         I appricite you for showing lots of curisity about us.We always try to provide you a good tour. You can fly with us safe and joyfully.Really you can get a excited travel with us.
           </p>
         </div>
         </section> 

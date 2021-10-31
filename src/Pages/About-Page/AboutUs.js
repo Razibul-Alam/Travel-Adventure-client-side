@@ -12,18 +12,18 @@ const AboutUs = () => {
         </div>
         <div className="col-lg-6">
         <ListGroup>
-  <ListGroup.Item variant="primary"><span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span> Flexible Classes</ListGroup.Item>
+  <ListGroup.Item variant="primary"><span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Safe Travel</ListGroup.Item>
   <ListGroup.Item action variant="secondary">
-  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Educator support
+  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Good Support
   </ListGroup.Item>
   <ListGroup.Item action variant="success">
-  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Offline Mode
+  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Excillent Co-operation
   </ListGroup.Item>
   <ListGroup.Item action variant="danger">
-  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span> Downloaded system
+  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span> Awesome Travel
   </ListGroup.Item>
   <ListGroup.Item action variant="success">
-  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Get Reward
+  <span className="fs-2 mx-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Really Loyal
   </ListGroup.Item>
   <ListGroup.Item>
   <span className="fs-2 mx-2" variant="primary"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>Great opportunity

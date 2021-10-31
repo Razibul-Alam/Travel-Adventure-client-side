@@ -3,7 +3,7 @@ import {Button,Card,Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
 const SingleAdventure = ({adventure}) => {
-    const{_id,img,title,descripton}=adventure;
+    const{_id,img,title,descripton,price}=adventure;
     return (
       <Col>
       <Card>
@@ -13,7 +13,10 @@ const SingleAdventure = ({adventure}) => {
           <Card.Text>
            {descripton}
           </Card.Text>
-          <Link to={`/booking/${_id}`}><Button>Book</Button></Link>
+          <div className="d-flex justify-content-between align-items-center">
+          <Link to={`/booking/${_id}`}><Button>Book Ticket</Button></Link>
+          <h5 className="text-success">Price: ${price}</h5>
+          </div>
         </Card.Body>
         
       </Card>

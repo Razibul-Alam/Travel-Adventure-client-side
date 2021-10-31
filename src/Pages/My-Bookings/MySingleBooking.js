@@ -4,24 +4,30 @@ import {Link} from 'react-router-dom'
 
 
 const MySingleBooking = ({booking,cancelBooking}) => {
-    const{_id,img,title,descripton,status}=booking;
+    const{_id,img,title,descripton,status,date,ticket,from,name}=booking;
     return (
-        <Col>
-        <Card>
-          <Card.Img variant="top" src={img} className='img-fluid' />
-          <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>
-             {descripton}
-            </Card.Text>
-            <Card.Text className='text-warning'>
-             {status}
-            </Card.Text>
-            <Button onClick={()=>{cancelBooking(_id)}}>Cancel</Button>
-          </Card.Body>
-          
-        </Card>
-      </Col>
+      <Col>
+      <Card>
+        <Card.Body className='text-center'>
+         <Card.Title><span> {from}</span> to 
+         <span> {title}</span> </Card.Title>
+         <Card.Text className='text-danger'>
+           Booked by {name}
+          </Card.Text>
+          <Card.Text className=''>
+           Number of ticket {ticket}
+          </Card.Text>
+          <Card.Text className='text-primary'>
+           Date: {date}
+          </Card.Text>
+          <Card.Text className='text-warning'>
+           {status}
+          </Card.Text>
+          <Button onClick={()=>{cancelBooking(_id)}}>Cancel</Button>
+        </Card.Body>
+        
+      </Card>
+    </Col>
     );
 };
 

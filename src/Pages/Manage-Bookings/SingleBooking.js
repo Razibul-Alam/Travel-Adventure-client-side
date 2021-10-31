@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios';
 
 const SingleBooking = ({booking,cancelBooking}) => {
-    const{_id,img,title,descripton,status,name}=booking;
+    const{_id,img,title,descripton,status,name,from,date,ticket}=booking;
    
     // useEffect(()=>{
     //  cancelBooking(_id)
@@ -19,17 +19,20 @@ axios.put('https://hidden-bayou-72012.herokuapp.com/updateStatus',approval)
     return (
         <Col>
         <Card>
-          <Card.Img variant="top" src={img} className='img-fluid' />
-          <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>
-             {descripton}
+          <Card.Body className='text-center'>
+           <Card.Title><span> {from}</span> to 
+           <span> {title}</span> </Card.Title>
+           <Card.Text className='text-danger'>
+             Booked by {name}
+            </Card.Text>
+            <Card.Text className=''>
+             Number of ticket {ticket}
+            </Card.Text>
+            <Card.Text className='text-primary'>
+             Date: {date}
             </Card.Text>
             <Card.Text className='text-warning'>
              {status}
-            </Card.Text>
-            <Card.Text className='text-danger'>
-             Booked by {name}
             </Card.Text>
             <Button className='me-2' onClick={()=>{approveBooking(_id)}}>Approve</Button>
             <Button onClick={()=>{cancelBooking(_id)}}>Cancel</Button>

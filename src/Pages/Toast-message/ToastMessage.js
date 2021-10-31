@@ -8,7 +8,7 @@ const ToastMessage = ({toastShow,setToastShow}) => {
         
       <div>
         <Toast onClose={() => setToastShow(false)} show={toastShow} delay={3000} autohide>
-          <h5 className="text-center text-danger">Welcome back </h5>
+          <h5 className="text-center text-success">Booked Successfully </h5>
         </Toast>
         </div>
     
