@@ -1,15 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import useAuth from './../../Hooks/useAuth';
 import {Button} from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import ModalMessage from './../Modal-Message/ModalMessage';
 
 const Login = () => {
+    const [show, setShow] = useState(false);
+    const handleShow = () => setShow(true);
     const location=useLocation()
     const history =useHistory()
     const redirectLocation=location?.state?.from || '/'
-    const {loginWithGoogle,user,setUser}=useAuth()
+    const {loginWithGoogle,setUser,error,setError}=useAuth()
     const handleLoginWithGoogle=()=>{
         loginWithGoogle()
         .then((result) => {
@@ -17,8 +20,16 @@ const Login = () => {
             setUser(user)
             history.push(redirectLocation)
           })
+          .catch((error) => {
+            const errorMessage = error.message;
+            setError(errorMessage)
+            handleShow()
+          })
     }
+   
     return (
+        <>
+         <ModalMessage show={show} setShow={setShow} message={error} />
         <section className="m-auto justify-content-center row bg-dark">
         <div className="col-lg-6 col-md-6 col-sm-8 my-5">
             <div className="m-2 p-2 bg-light">
@@ -30,6 +41,7 @@ const Login = () => {
         </div>
         </div>
         </section>
+        </>
     );
 };
 

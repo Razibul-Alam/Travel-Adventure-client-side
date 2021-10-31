@@ -10,9 +10,8 @@ const Footer = () => {
         <div className="col-lg-4 mb-2">
           <h5>Our Services</h5>
           <hr className='w-50 m-auto'/>
-         <Link to='/'><p>Bankok Tour</p></Link>
-         <Link to='/'><p>Singapore Tour</p></Link>
-         <Link to='/'><p>Maldives Tour</p></Link> 
+         <Link to='/'><p>VIP Travel</p></Link>
+         <Link to='/'><p>General Travel</p></Link> 
         </div>
         <div className="col-lg-4">
           <h5>Travel Adventure</h5>

@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const BannerItem = () => {
@@ -12,7 +11,7 @@ const BannerItem = () => {
                We are ready to fly with you.Book a ticket and fly with us.Also feel the earth from deep.
                We are ready to fly with you.Book a ticket and fly with us.Also feel the earth from deep.
             </p>
-            <Link to ="/appointment"><button className="btn btn-primary">BOOK NOW</button></Link>
+            <Link to ="/adventures"><button className="btn btn-primary">BOOK NOW</button></Link>
         </div>
         <div className="col-md-7">
             <img src='https://media.istockphoto.com/photos/plane-flying-picture-id504903829?k=20&m=504903829&s=612x612&w=0&h=jCuY4XojyzRpYKNrUTxxw5EAank_4frjqc2hSLW0USw=' alt="" className="img-fluid"/>

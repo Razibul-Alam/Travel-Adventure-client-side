@@ -11,7 +11,7 @@ const ManageBookings = () => {
         axios.get(`https://hidden-bayou-72012.herokuapp.com/allBookings`)
         .then(res => {
           const allBookings = res.data;
-          console.log(allBookings)
+          // console.log(allBookings)
           setBookings(allBookings)
           
         })
@@ -34,7 +34,7 @@ setBookings(remainingItems)
         <div className='container w-75 my-5'>
           <h2 className='text-center text-danger mb-4'>The number of Bookings {bookings?.length}</h2>
         <Row xs={1} md={2} className="g-4">
-           {bookings.map(booking=><SingleBooking booking={booking} cancelBooking={cancelBooking}/>)}
+           {bookings?.map(booking=><SingleBooking booking={booking} cancelBooking={cancelBooking}/>)}
            </Row>
            </div>
            </>

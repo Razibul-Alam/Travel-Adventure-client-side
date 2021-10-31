@@ -1,10 +1,8 @@
 import React from 'react';
 import {Button,Card,Col} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
-
 
 const MySingleBooking = ({booking,cancelBooking}) => {
-    const{_id,img,title,descripton,status,date,ticket,from,name}=booking;
+    const{_id,title,status,date,ticket,from,name}=booking;
     return (
       <Col>
       <Card>

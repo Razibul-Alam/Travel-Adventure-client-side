@@ -10,7 +10,7 @@ const AllAdventures = () => {
         axios.get(`https://hidden-bayou-72012.herokuapp.com/allEvents`)
         .then(res => {
           const allAdventure = res.data;
-          console.log(allAdventure)
+          // console.log(allAdventure)
           setAdventures(allAdventure)
           setInitialLoading(false)
           
@@ -25,7 +25,7 @@ const AllAdventures = () => {
         <h2 className='text-center text-success'>Our Packages</h2>
         <hr className='m-auto text-danger bolder w-25'/>
         <Row xs={1} md={3} className="g-4 mt-3">
-           {adventures.map(adventure=><SingleAdventure key={adventure._id} adventure={adventure}/>)}
+           {adventures?.map(adventure=><SingleAdventure key={adventure._id} adventure={adventure}/>)}
         </Row>
         </div>
         </>

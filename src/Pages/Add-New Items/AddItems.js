@@ -4,6 +4,8 @@ import axios from 'axios';
 import ModalMessage from '../Modal-Message/ModalMessage';
 
 const AddItems = () => {
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
     const [imgUrl,setImgUrl]=useState('')
     const [uploading,setUploading]=useState(false)
     const { register,reset, handleSubmit,formState: { errors } } = useForm();
@@ -17,7 +19,8 @@ const AddItems = () => {
 
         }
       axios.post('https://hidden-bayou-72012.herokuapp.com/addItem',info)
-      .then(response => {
+      .then(response => { 
+        handleShow()
         reset()
       })
      
@@ -39,6 +42,7 @@ const AddItems = () => {
 
     return (
       <>
+      <ModalMessage show={show} setShow={setShow} message={'Succesfully added'} />
       <div className="mt-5 d-flex justify-content-center row">
          <div className="p-4 rounded col-lg-6 col-sm-10 shadow">
          <h2 className="text-center text-danger mb-4">Add Package</h2>

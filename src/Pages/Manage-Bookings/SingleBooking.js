@@ -1,15 +1,10 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import {Button,Col,Card} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
 import axios from 'axios';
 
 const SingleBooking = ({booking,cancelBooking}) => {
-    const{_id,img,title,descripton,status,name,from,date,ticket}=booking;
-   
-    // useEffect(()=>{
-    //  cancelBooking(_id)
-      
-    // },[_id])
+    const{_id,title,status,name,from,date,ticket}=booking;
+  
     // booking approve handle
     const approveBooking=(id)=>{
       const approval={status:'Approved',id:id}
@@ -34,7 +29,7 @@ axios.put('https://hidden-bayou-72012.herokuapp.com/updateStatus',approval)
             <Card.Text className='text-warning'>
              {status}
             </Card.Text>
-            <Button className='me-2' onClick={()=>{approveBooking(_id)}}>Approve</Button>
+           {status.length<8&& <Button className='me-2' onClick={()=>{approveBooking(_id)}}>Approve</Button>}
             <Button onClick={()=>{cancelBooking(_id)}}>Cancel</Button>
           </Card.Body>
           
